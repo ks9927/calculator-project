@@ -54,6 +54,7 @@ button {
     font-weight: bold;
     font-family: "Quicksand", sans-serif;
     text-align: center;
+    cursor: pointer;
 }
 
 .clear-btn,
