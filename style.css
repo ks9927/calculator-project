@@ -2,3 +2,31 @@
     font-family: "Digital 7";
     src: url(digital-7-font/Digital7-rg1mL.ttf);
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-container {
+    border: solid 2px purple;
+    width: 60%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.display-container {
+    border: solid 2px pink;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: "Digital 7", sans-serif;
+    font-size: 30px;
+}
