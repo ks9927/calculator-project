@@ -32,3 +32,22 @@ body {
     font-family: "Digital 7", sans-serif;
     font-size: 30px;
 }
+
+.buttons-container {
+    border: solid 2px white;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+button {
+    border-radius: 25px;
+    background-color: white;
+    border: solid 2px white;
+    color: #8b73ff;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+}
