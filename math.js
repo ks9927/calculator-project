@@ -29,7 +29,7 @@ let secondNum;
 
 const displayText = document.querySelector('.display-text');
 const numberBtns = document.querySelectorAll(".number-btn");
-
+const operatorBtns = document.querySelectorAll(".operator-btn");
 function displayNumber() {
     numberBtns.forEach(btn => {
         btn.addEventListener('click', () => {
