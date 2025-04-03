@@ -55,15 +55,28 @@ function displayContent() {
 
     operatorBtns.forEach(button => {
         button.addEventListener('click', () => {
+            if (!operator && firstNum) {
+                // Set the operator only if firstNum exists
                 operator = button.textContent;
-                displayText.textContent += operator;
-              
+                displayText.textContent = firstNum + operator;
+                console.log("Operator: " + operator);
+            }
         });
     });
 
     equalBtn.addEventListener('click', () => {
-        equalSign = equalBtn.textContent;
-        displayText.textContent += equalSign;
+        if (firstNum && operator && secondNum) {
+            equalSign = equalBtn.textContent;
+            // Perform the calculation
+            const result = operate(parseFloat(firstNum), operator, parseFloat(secondNum));
+            displayText.textContent = firstNum + operator + secondNum+ equalSign + result;
+
+            // Reset variables for the next calculation
+            firstNum = result.toString();
+            operator = '';
+            secondNum = '';
+            console.log("Result: " + result);
+        }
     });   
 };
 
