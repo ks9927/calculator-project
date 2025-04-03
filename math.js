@@ -31,6 +31,9 @@ const displayText = document.querySelector('.display-text');
 const numberBtns = document.querySelectorAll(".number-btn");
 const operatorBtns = document.querySelectorAll(".operator-btn");
 const equalBtn = document.querySelector(".equals-btn");
+
+
+//function to display numbers and operators
 function displayContent() {
     numberBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -45,7 +48,10 @@ function displayContent() {
             displayText.textContent += operatorText;
         });
     })
+};
 
+//function to display answer to equation
+function displayResult() {
     equalBtn.addEventListener('click', () => {
         let equalText = equalBtn.textContent;
         displayText.textContent += equalText;
@@ -53,3 +59,4 @@ function displayContent() {
 };
 
 displayContent();
+displayResult();
