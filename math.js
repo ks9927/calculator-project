@@ -34,7 +34,7 @@ function displayNumber() {
     numberBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             let displayValue = btn.textContent;
-            displayText.textContent = displayValue;
+            displayText.textContent += displayValue;
         });
     });
 };
