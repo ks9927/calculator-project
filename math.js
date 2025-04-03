@@ -30,13 +30,20 @@ let secondNum;
 const displayText = document.querySelector('.display-text');
 const numberBtns = document.querySelectorAll(".number-btn");
 const operatorBtns = document.querySelectorAll(".operator-btn");
-function displayNumber() {
+function displayContent() {
     numberBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             let displayValue = btn.textContent;
             displayText.textContent += displayValue;
         });
     });
+
+    operatorBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            let operatorText = button.textContent;
+            displayText.textContent += operatorText;
+        });
+    })
 };
 
-displayNumber();
+displayContent();
