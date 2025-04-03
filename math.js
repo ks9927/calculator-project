@@ -37,8 +37,12 @@ let secondNum = '';
 function displayContent() {
     numberBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            firstNum = btn.textContent;
-            displayText.textContent += firstNum;
+           
+                firstNum = btn.textContent;
+                displayText.textContent += firstNum;
+                console.log("1st Num:" + firstNum);
+            
+                
         });
     });
 
@@ -46,6 +50,7 @@ function displayContent() {
         button.addEventListener('click', () => {
                 operator = button.textContent;
                 displayText.textContent += operator;
+              
         });
     });
 
