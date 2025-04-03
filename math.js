@@ -6,11 +6,6 @@ const multiply = (e, f) => e * f;
 
 const divide = (g, h) => g / h;
 
-//variables to update the display
-let firstNum;
-let operator;
-let secondNum;
-
 //operate function
 function operate(num1, oper, num2) {
 if (oper === '+') {
@@ -26,3 +21,22 @@ else if (oper === '/') {
     return divide(num1, num2);
 }
 }
+
+//variables to update the display
+let firstNum;
+let operator;
+let secondNum;
+
+const displayText = document.querySelector('.display-text');
+const numberBtns = document.querySelectorAll(".number-btn");
+
+function displayNumber() {
+    numberBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            let displayValue = btn.textContent;
+            displayText.textContent = displayValue;
+        });
+    });
+};
+
+displayNumber();
