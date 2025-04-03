@@ -47,16 +47,14 @@ function displayContent() {
             let operatorText = button.textContent;
             displayText.textContent += operatorText;
         });
-    })
-};
+    });
 
-//function to display answer to equation
-function displayResult() {
     equalBtn.addEventListener('click', () => {
         let equalText = equalBtn.textContent;
         displayText.textContent += equalText;
     });   
 };
 
+
+
 displayContent();
-displayResult();
