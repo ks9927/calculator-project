@@ -29,29 +29,29 @@ const operatorBtns = document.querySelectorAll(".operator-btn");
 const equalBtn = document.querySelector(".equals-btn");
 
 //variables to update the display
-let firstNum;
-let operator;
-let secondNum;
+let firstNum = '';
+let operator = '';
+let secondNum = '';
 
 //function to display numbers and operators
 function displayContent() {
     numberBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            let displayValue = btn.textContent;
-            displayText.textContent += displayValue;
+            firstNum = btn.textContent;
+            displayText.textContent += firstNum;
         });
     });
 
     operatorBtns.forEach(button => {
         button.addEventListener('click', () => {
-            let operatorText = button.textContent;
-            displayText.textContent += operatorText;
+                operator = button.textContent;
+                displayText.textContent += operator;
         });
     });
 
     equalBtn.addEventListener('click', () => {
-        let equalText = equalBtn.textContent;
-        displayText.textContent += equalText;
+        equalSign = equalBtn.textContent;
+        displayText.textContent += equalSign;
     });   
 };
 
