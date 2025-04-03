@@ -22,16 +22,16 @@ else if (oper === '/') {
 }
 }
 
-//variables to update the display
-let firstNum;
-let operator;
-let secondNum;
 
 const displayText = document.querySelector('.display-text');
 const numberBtns = document.querySelectorAll(".number-btn");
 const operatorBtns = document.querySelectorAll(".operator-btn");
 const equalBtn = document.querySelector(".equals-btn");
 
+//variables to update the display
+let firstNum;
+let operator;
+let secondNum;
 
 //function to display numbers and operators
 function displayContent() {
@@ -57,4 +57,8 @@ function displayContent() {
 
 
 
+
+
+
 displayContent();
+
