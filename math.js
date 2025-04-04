@@ -47,8 +47,6 @@ function displayContent() {
             displayText.textContent = firstNum + operator + secondNum;
             console.log("2nd Num: " + secondNum);
            }
-               
-            
                 
         });
     });
@@ -63,9 +61,11 @@ function displayContent() {
             }
         });
     });
-
+    
     equalBtn.addEventListener('click', () => {
+
         if (firstNum && operator && secondNum) {
+           
             equalSign = equalBtn.textContent;
             // Perform the calculation
             const result = operate(parseFloat(firstNum), operator, parseFloat(secondNum));
@@ -76,11 +76,20 @@ function displayContent() {
             operator = '';
             secondNum = '';
             console.log("Result: " + result);
+            
         }
     });   
 };
 
+const clearBtn = document.querySelector(".clear-btn");
+const backspaceBtn = document.querySelector(".delete-btn");
 
+clearBtn.addEventListener("click", () => {
+    displayText.textContent = "";
+    firstNum = '';
+    secondNum = '';
+    operator = '';
+})
 
 
 
