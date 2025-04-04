@@ -89,6 +89,22 @@ clearBtn.addEventListener("click", () => {
     firstNum = '';
     secondNum = '';
     operator = '';
+});
+
+backspaceBtn.addEventListener("click", () => {
+    if (secondNum) {
+        // Remove the last digit from secondNum
+        secondNum = secondNum.slice(0, -1);
+        displayText.textContent = firstNum + operator + secondNum;
+    } else if (operator) {
+        // Remove the operator if secondNum is empty
+        operator = '';
+        displayText.textContent = firstNum;
+    } else if (firstNum) {
+        // Remove the last digit from firstNum
+        firstNum = firstNum.slice(0, -1);
+        displayText.textContent = firstNum;
+    }
 })
 
 
