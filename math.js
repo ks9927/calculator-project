@@ -105,7 +105,24 @@ backspaceBtn.addEventListener("click", () => {
         firstNum = firstNum.slice(0, -1);
         displayText.textContent = firstNum;
     }
-})
+});
+
+const decimalBtn = document.querySelector(".decimal-btn");
+decimalBtn.addEventListener("click", () => {
+    if (!operator) {
+        // Add decimal to firstNum if it doesn't already have one
+        if (!firstNum.includes(".")) {
+            firstNum += ".";
+            displayText.textContent = firstNum;
+        }
+    } else {
+        // Add decimal to secondNum if it doesn't already have one
+        if (!secondNum.includes(".")) {
+            secondNum += ".";
+            displayText.textContent = firstNum + operator + secondNum;
+        }
+    }
+});
 
 
 
